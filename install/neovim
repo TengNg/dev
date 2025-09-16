@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 
+VERSION=$1 # v0.11.4
+
 sudo apt-get install ninja-build gettext cmake curl build-essential git
 
 cd ~
 git clone https://github.com/neovim/neovim
 cd neovim
+
+if [ -n "$VERSION" ]; then
+  git checkout $VERSION
+fi
+
 make CMAKE_BUILD_TYPE=Release
 sudo make install
