@@ -1,3 +1,7 @@
 [submodule "env"]
 	path = env
 	url = https://github.com/dti3n/.dotfiles.git
+
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/dti3n/init.lua.git
